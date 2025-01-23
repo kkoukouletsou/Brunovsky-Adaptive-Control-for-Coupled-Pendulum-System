@@ -49,9 +49,9 @@ u1 = u_a1 - (n_a1 * norm(u_a1)^2 + n_b1 * norm(u_b1)^2) * E1;
 u2 = u_a2 - (n_a2 * norm(u_a2)^2 + n_b2 * norm(u_b2)^2) * E2; 
 
 % COMMENT TO SEE CONTROLLER OUTPUT WITHOUT SATURATION
-% saturation_value = 20;
-% u1 = max(min(u1, saturation_value), -saturation_value); 
-% u2 = max(min(u2, saturation_value), -saturation_value);
+saturation_value = 20;
+u1 = max(min(u1, saturation_value), -saturation_value); 
+u2 = max(min(u2, saturation_value), -saturation_value);
 
 u1_values = [u1_values; u1];
 u2_values = [u2_values; u2];
